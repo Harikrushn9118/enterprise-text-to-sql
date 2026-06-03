@@ -1,0 +1,402 @@
+[
+  {
+    "term": "math is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Mathematics'"
+  },
+  {
+    "term": "Chemistry is",
+    "predicate": "TABLE.OFFER_DEPT_NAME = 'Chemistry'"
+  },
+  {
+    "term": "admissions is",
+    "predicate": "TABLE.ORGANIZATION_NAME = 'ADMISSIONS'"
+  },
+  {
+    "term": "exclude organizations '138' and '250' is",
+    "predicate": "TABLE.ORGANIZATION_ID NOT IN ('138', '250')"
+  },
+  {
+    "term": "Political Science is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Political Science'"
+  },
+  {
+    "term": "Political Science is",
+    "predicate": "TABLE.DEPARTMENT = '17'"
+  },
+  {
+    "term": "Political Science is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '17'"
+  },
+  {
+    "term": "degree-granting is",
+    "predicate": "TABLE.IS_DEGREE_GRANTING = 'Y'"
+  },
+  {
+    "term": "Biology is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '7'"
+  },
+  {
+    "term": "biology and chemistry department is",
+    "predicate": "TABLE.OFFER_DEPT_NAME IN ('Chemistry', 'Biology')"
+  },
+  {
+    "term": "Course 7 is",
+    "predicate": "TABLE.OFFER_DEPT_NAME = 'Biology'"
+  },
+  {
+    "term": "used as a residence is",
+    "predicate": "TABLE.BUILDING_TYPE = 'RESIDENT'"
+  },
+  {
+    "term": "buildings at MIT is",
+    "predicate": "TABLE.SITE = 'MIT'"
+  },
+  {
+    "term": "Stata building is",
+    "predicate": "TABLE.BUILDING_NAME = 'Ray and Maria Stata Center'"
+  },
+  {
+    "term": "Stata building is",
+    "predicate": "TABLE.BUILDING_KEY = '32'"
+  },
+  {
+    "term": "Course 18 is",
+    "predicate": "TABLE.DEPARTMENT = '18'"
+  },
+  {
+    "term": "Course 18 is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '18'"
+  },
+  {
+    "term": "biology department is",
+    "predicate": "LOWER(TABLE.DLC_NAME) = LOWER('Biology')"
+  },
+  {
+    "term": "Chemistry is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '5'"
+  },
+  {
+    "term": "department of facilities is",
+    "predicate": "TABLE.ORGANIZATION_NAME = 'DP OF FACILITIES'"
+  },
+  {
+    "term": "academic building is",
+    "predicate": "TABLE.BUILDING_TYPE = 'ACADEMIC'"
+  },
+  {
+    "term": "Course 6 is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Electrical Eng & Computer Sci'"
+  },
+  {
+    "term": "history department is",
+    "predicate": "LOWER(TABLE.DLC_NAME) = LOWER('History')"
+  },
+  {
+    "term": "Mechanical Engineering is",
+    "predicate": "UPPER(TABLE.SIS_ADMIN_DEPARTMENT_NAME) = 'MECHANICAL ENGINEERING'"
+  },
+  {
+    "term": "except Cambridge-MIT Institute is",
+    "predicate": "TABLE.ORGANIZATION_NAME NOT IN ('CAMBRIDGE-MIT INST')"
+  },
+  {
+    "term": "exclude usage types that include 'STORAGE' is",
+    "predicate": "TABLE.SPACE_USAGE NOT LIKE '%STORAGE%'"
+  },
+  {
+    "term": "except organizations '101' and '103' is",
+    "predicate": "TABLE.ORGANIZATION_ID NOT IN ('101', '103')"
+  },
+  {
+    "term": "courses with materials is",
+    "predicate": "TIP_SUBJECT_OFFERED.IS_NO_COURSE_MATERIAL = 'N'"
+  },
+  {
+    "term": "Physics is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Physics'"
+  },
+  {
+    "term": "Chemistry is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Chemistry'"
+  },
+  {
+    "term": "Biology is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Biology'"
+  },
+  {
+    "term": "Stata building is",
+    "predicate": "TABLE.BUILDING_KEY = '32' and TABLE.BUILDING_COMPONENT = '32'"
+  },
+  {
+    "term": "Maclaurin Buildings is",
+    "predicate": "TABLE.BUILDING_NAME = 'MACLAURIN BUILDINGS (3)'"
+  },
+  {
+    "term": "Maclaurin Buildings is",
+    "predicate": "TABLE.BUILDING_KEY = 3 and TABLE.BUILDING_COMPONENT = '3'"
+  },
+  {
+    "term": "student is",
+    "predicate": "TABLE.EMPLOYEE_TYPE = 'Student'"
+  },
+  {
+    "term": "Fairchild Building is",
+    "predicate": "TABLE.BUILDING_KEY = 36"
+  },
+  {
+    "term": "Physics is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '8'"
+  },
+  {
+    "term": "Ashdown is",
+    "predicate": "TABLE.BUILDING_NAME = 'ASHDOWN HOUSE'"
+  },
+  {
+    "term": "Ashdown is",
+    "predicate": "TABLE.BUILDING_KEY = NW35"
+  },
+  {
+    "term": "Zoe is",
+    "predicate": "TABLE.FIRST_NAME = 'Zoe'"
+  },
+  {
+    "term": "Course 6 is",
+    "predicate": "TABLE.DEPARTMENT = '6'"
+  },
+  {
+    "term": "Course 18 is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Mathematics' and TABLE.DEPARTMENT_CODE = '18'"
+  },
+  {
+    "term": "Course 15 is",
+    "predicate": "UPPER(TABLE.SIS_ADMIN_DEPARTMENT_NAME) = 'MANAGEMENT'"
+  },
+  {
+    "term": "Management is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '15'"
+  },
+  {
+    "term": "Brown is",
+    "predicate": "TABLE.BUILDING_NAME = 'BROWN BUILDING'"
+  },
+  {
+    "term": "Brown Building is",
+    "predicate": "TABLE.BUILDING_KEY = 39"
+  },
+  {
+    "term": "assignable is",
+    "predicate": "TABLE.ASSIGNABLE = 1"
+  },
+  {
+    "term": "Electrical Engineering and Computer Science is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '6'"
+  },
+  {
+    "term": "Biology is",
+    "predicate": "TABLE.DEPARTMENT = '7'"
+  },
+  {
+    "term": "Chemistry is",
+    "predicate": "TABLE.DEPARTMENT = '5'"
+  },
+  {
+    "term": "owned is",
+    "predicate": "TABLE.OWNERSHIP_TYPE = 'OWNED'"
+  },
+  {
+    "term": "Kevin is",
+    "predicate": "TABLE.FIRST_NAME = 'Kevin'"
+  },
+  {
+    "term": "Course 14 is",
+    "predicate": "TABLE.DEPARTMENT_NAME = 'Economics'"
+  },
+  {
+    "term": "building 32 is",
+    "predicate": "TABLE.BUILDING_KEY = 32"
+  },
+  {
+    "term": "Mechanical Engineering is",
+    "predicate": "TABLE.DEPARTMENT_CODE = '2'"
+  },
+  {
+    "term": "Mechanical Engineering is",
+    "predicate": "TABLE.DEPARTMENT = '2'"
+  },
+  {
+    "term": "Electrical Engineering and Computer Science department is",
+    "predicate": "TABLE.ORGANIZATION = 'Electrical Engineering-Computer Science'"
+  },
+  {
+    "term": "Benedict is",
+    "predicate": "TABLE.FIRST_NAME = 'Benedict'"
+  },
+  {
+    "term": "Course 5 is",
+    "predicate": "TABLE.OFFER_DEPT_CODE = '5'"
+  },
+  {
+    "term": "Mathematics is",
+    "predicate": "TABLE.DEPARTMENT_NAME = '18'"
+  },
+  {
+    "term": "current term is",
+    "predicate": "TABLE.IS_CURRENT_TERM = 'Y'"
+  },
+  {
+    "term": "Simons is",
+    "predicate": "TABLE.BUILDING_NAME = 'THE SIMONS BUILDING'"
+  },
+  {
+    "term": "Simons is",
+    "predicate": "TABLE.BUILDING_KEY = 2"
+  },
+  {
+    "term": "service building is",
+    "predicate": "TABLE.BUILDING_TYPE = 'SERVICE'"
+  },
+  {
+    "term": "anthropology is",
+    "predicate": "TABLE.ORGANIZATION_NAME = 'ANTHROPOLOGY'"
+  },
+  {
+    "term": "Host prime-35 is",
+    "predicate": "instances.host = 'prime-35'"
+  },
+  {
+    "term": "Active migrations is",
+    "predicate": "migrations.status NOT IN ('accepted', 'confirmed', 'reverted', 'error', 'failed', 'completed')"
+  },
+  {
+    "term": "Host blaze8-12 is",
+    "predicate": "instances.host = 'blaze8-12'"
+  },
+  {
+    "term": "Display 'prime' is",
+    "predicate": "instances.display_name REGEXP 'prime'"
+  },
+  {
+    "term": "Host ether-18 is",
+    "predicate": "instances.host = 'ether-18'"
+  },
+  {
+    "term": "Display 'flare' is",
+    "predicate": "instances.display_name REGEXP 'flare'"
+  },
+  {
+    "term": "Reservations expired before 2021-11-16 19:30:59 is",
+    "predicate": "reservations.expire < '2021-11-16 19:30:59'"
+  },
+  {
+    "term": "Reservations expired before 2021-05-13 16:53:07 is",
+    "predicate": "reservations.expire < '2021-05-13 16:53:07'"
+  },
+  {
+    "term": "Service binary nova-scheduler is",
+    "predicate": "services.binary = 'nova-scheduler'"
+  },
+  {
+    "term": "Enabled instance types is",
+    "predicate": "instance_types.disabled = false"
+  },
+  {
+    "term": "Host prime3-77 is",
+    "predicate": "instances.host = 'prime3-77'"
+  },
+  {
+    "term": "Aggregate ID 1 is",
+    "predicate": "aggregates.id = '1'"
+  },
+  {
+    "term": "Network ID 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d is",
+    "predicate": "ports.network_id IN ('0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d')"
+  },
+  {
+    "term": "Tenant ID 17ea94ad74b64b9d92f4888336a598c7 is",
+    "predicate": "ports.tenant_id IN ('17ea94ad74b64b9d92f4888336a598c7')"
+  },
+  {
+    "term": "Subnet ID 012993ae-5d73-4aad-834b-e87a31e99d48 is",
+    "predicate": "subnets.id IN ('012993ae-5d73-4aad-834b-e87a31e99d48')"
+  },
+  {
+    "term": "access_as_shared permission is",
+    "predicate": "networkrbacs.action = 'access_as_shared'"
+  },
+  {
+    "term": "exclusion of shared networks is",
+    "predicate": "networks.id NOT IN (SELECT networkrbacs.object_id FROM networkrbacs WHERE networkrbacs.action = 'access_as_shared' AND (networkrbacs.target_tenant = '*' OR networkrbacs.target_tenant = '9f13bf11e06e4d81b44c8c3e62d4362b'))"
+  },
+  {
+    "term": "Tenant ID 98333a1a28e746fa8c629c83a818ad57 is",
+    "predicate": "ports.tenant_id IN ('98333a1a28e746fa8c629c83a818ad57')"
+  },
+  {
+    "term": "IP Address 10.150.64.113/8 is",
+    "predicate": "ipallocations.ip_address IN ('10.150.64.113/8')"
+  },
+  {
+    "term": "Device ID da811c75-0f9b-462c-b020-8ea55f6ca7c7 is",
+    "predicate": "ports.device_id IN ('da811c75-0f9b-462c-b020-8ea55f6ca7c7')"
+  },
+  {
+    "term": "public access (wildcard) is",
+    "predicate": "networkrbacs.target_tenant = '*'"
+  },
+  {
+    "term": "Tenant ID 98333a1a28e746fa8c629c83a818ad57 is",
+    "predicate": "networks.tenant_id IN ('98333a1a28e746fa8c629c83a818ad57')"
+  },
+  {
+    "term": "Target Tenant ID 1ee6b5b4fe8c45cfa16c3ecdbb8ee02b is",
+    "predicate": "networkrbacs.target_tenant IN ('1ee6b5b4fe8c45cfa16c3ecdbb8ee02b')"
+  },
+  {
+    "term": "access_as_external permission is",
+    "predicate": "networkrbacs.action = 'access_as_external'"
+  },
+  {
+    "term": "Fixed IP Address 10.20.127.222/8 is",
+    "predicate": "floatingips.fixed_ip_address IN ('10.20.127.222/8')"
+  },
+  {
+    "term": "Tenant ID 9c982b4e161647ddb5f8637ac9eb551d is",
+    "predicate": "ports.tenant_id IN ('9c982b4e161647ddb5f8637ac9eb551d')"
+  },
+  {
+    "term": "Subnet ID 0807c5b3-aa6c-4108-8884-7b4948a19178 is",
+    "predicate": "subnets.id IN ('0807c5b3-aa6c-4108-8884-7b4948a19178')"
+  },
+  {
+    "term": "Subnet ID 0814cd95-6c95-4669-8415-e555344bb15b is",
+    "predicate": "subnets.id IN ('0814cd95-6c95-4669-8415-e555344bb15b')"
+  },
+  {
+    "term": "Subnet ID 16eaae8c-1920-4b8b-8765-f149dde8a1a6 is",
+    "predicate": "subnets.id IN ('16eaae8c-1920-4b8b-8765-f149dde8a1a6')"
+  },
+  {
+    "term": "Subnet ID 1e360a1e-339a-4dc7-a250-28c31fcd905a is",
+    "predicate": "subnets.id IN ('1e360a1e-339a-4dc7-a250-28c31fcd905a')"
+  },
+  {
+    "term": "Subnet ID 2019039a-089f-408c-b080-201a0c5cbe6f is",
+    "predicate": "subnets.id IN ('2019039a-089f-408c-b080-201a0c5cbe6f')"
+  },
+  {
+    "term": "Subnet ID 25a309b3-7334-44b7-99b5-85a874d28475 is",
+    "predicate": "subnets.id IN ('25a309b3-7334-44b7-99b5-85a874d28475')"
+  },
+  {
+    "term": "Subnet ID 25e390e6-3a89-42d7-a5e8-c4da22edc587 is",
+    "predicate": "subnets.id IN ('25e390e6-3a89-42d7-a5e8-c4da22edc587')"
+  },
+  {
+    "term": "Subnet ID 26a23140-1cb7-4ccd-b2d7-50611eb82663 is",
+    "predicate": "subnets.id IN ('26a23140-1cb7-4ccd-b2d7-50611eb82663')"
+  },
+  {
+    "term": "Subnet ID 2f08159a-e945-4ba2-a583-431d1f8078d9 is",
+    "predicate": "subnets.id IN ('2f08159a-e945-4ba2-a583-431d1f8078d9')"
+  }
+]
