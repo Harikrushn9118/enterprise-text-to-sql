@@ -14,13 +14,16 @@ CRITICAL SYNTAX & COMPATIBILITY RULES:
    - NEVER use bare columns. If two tables have the same column name (e.g. `id`), you MUST prefix it (e.g. `t1.id`) to avoid ambiguous column errors.
    - Ensure you are pulling columns from the correct table alias.
 3. EXACT COLUMNS: ONLY select columns that explicitly exist in the provided CREATE TABLE schemas. NEVER guess, hallucinate, or truncate names. If a column is not in the schema, do NOT use it.
-4. STRICT SQLITE COMPLIANCE:
-   - You MUST write 100% compliant, explicit SQLite 3 syntax. Never use shorthand syntax, and never use functions/features from other dialects (e.g. SQL Server, PostgreSQL).
-   - Use COALESCE, never ISNULL. Use LOG(), never LN(). Use LIKE/GLOB, never REGEXP.
-   - For variance, use: AVG(x*x) - AVG(x)*AVG(x)
-   - For stddev, use: SQRT(AVG(x*x) - AVG(x)*AVG(x))
-   - For geometric mean, use: EXP(AVG(LOG(x)))
-   - FULLY SPECIFY SYNTAX: If SQLite requires full bounds or explicit formatting (e.g. for window frames), you MUST spell out the complete specification (e.g. `ROWS BETWEEN CURRENT ROW AND n FOLLOWING`, never shorthand).
+4. STRICT SQLITE COMPLIANCE (NO POSTGRES/MYSQL SYNTAX):
+   - You MUST write 100% compliant, explicit SQLite 3 syntax. Never use functions from other dialects.
+   - MATH: Use COALESCE, never ISNULL. Use LOG(), never LN().
+     * For variance, use: AVG(x*x) - AVG(x)*AVG(x)
+     * For stddev, use: SQRT(AVG(x*x) - AVG(x)*AVG(x))
+     * For geometric mean, use: EXP(AVG(LOG(x)))
+   - STRINGS: SQLite does NOT have CONCAT(). You MUST use the `||` operator (e.g., `a || ' ' || b`). SQLite does NOT have LEFT() or RIGHT(), use `SUBSTR(col, start, length)`. SQLite does NOT have ILIKE, use `LIKE` (it is case-insensitive).
+   - DATES: SQLite does NOT have EXTRACT(), YEAR(), MONTH(), DATE_ADD(), or DATE_TRUNC(). You MUST use `strftime('%Y', date_col)` or `date(date_col, '+1 day')`.
+   - CASTING: Do NOT use Postgres cast syntax `col::int`. You MUST use `CAST(col AS INTEGER)` or `CAST(col AS REAL)`.
+   - BOOLEANS: SQLite does not have native booleans. Use `1` for True and `0` for False.
 5. GROUP BY RULES: When using aggregations, you MUST include a GROUP BY clause that contains ALL non-aggregated columns from your SELECT statement.
 6. NULL HANDLING: Handle NULLs properly with COALESCE or IS NOT NULL.
 7. CTE RULES: If using WITH clauses, you MUST have a final main SELECT at the end. Do NOT nest WITH clauses.
