@@ -11,7 +11,6 @@ from app.models.schemas import (
 logger = structlog.get_logger()
 router = APIRouter()
 
-
 @router.post("/retrieve")
 async def retrieve_tables(request: RetrieveRequest):
     logger.info("api_request_retrieve", question=request.question)

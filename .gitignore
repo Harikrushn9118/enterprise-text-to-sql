@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 mock_db.db
 .gemini/
+test_*.py
+bench_results.json
+rewrite_history.py

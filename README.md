@@ -25,7 +25,7 @@ enterprise-text-to-sql/
 │   ├── benchmark_questions.json 
 │   ├── domain_knowledge.json    
 │   └── table_schemas.json       
-├── images/                  # Postman screenshots
+├── docs/                    # Postman screenshots
 ├── scripts/                 # Mock DB setup scripts
 ├── .env.example             
 ├── requirements.txt         

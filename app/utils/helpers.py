@@ -24,11 +24,9 @@ def clean_sql(sql: str) -> str:
             sql = sql[match.start():]
 
     if ';' in sql:
-        sql = sql[:sql.index(';') + 1]
+        sql = sql[:sql.index(';')]
 
     sql = sql.strip()
-    if sql and not sql.endswith(';'):
-        sql += ';'
     return sql
 
 def truncate_text(text: str, max_length: int = 500) -> str:
