@@ -37,10 +37,14 @@ enterprise-text-to-sql/
 ## Quick Start
 
 ### 1. Install Dependencies
+Run the automated setup script. This script automatically detects Python 3.12, creates a virtual environment, and strictly installs the locked dependencies:
 ```bash
-python3 -m venv venv
+./setup.sh
+```
+
+If the script fails because you don't have Python 3.12 installed, follow the terminal instructions to install it. Once finished, activate your environment:
+```bash
 source venv/bin/activate
-pip install -r requirements.txt
 ```
 
 ### 2. Configure Environment
