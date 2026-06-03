@@ -1,0 +1,26 @@
+# Core Framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# Database
+sqlalchemy==2.0.35
+
+# SQL Parsing & Validation
+sqlparse==0.5.1
+
+# Embeddings (semantic retrieval)
+sentence-transformers==3.1.1
+
+# Dataset loading
+datasets==3.0.1
+
+# LLM API calls & retry logic
+httpx==0.27.2
+tenacity==9.0.0
+
+# Utilities
+python-dotenv==1.0.1
+structlog==24.4.0
+numpy>=1.26.0
