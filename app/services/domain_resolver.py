@@ -31,41 +31,15 @@ class DomainResolver:
         resolved = []
         for entry in self.knowledge_base:
             term = entry.get("term", "").lower()
-            table = entry.get("table", "")
-            column = entry.get("column", "")
-            value = entry.get("value", "")
+            predicate = entry.get("predicate", "")
             if term not in question_lower:
                 continue
-            if str(value).startswith("FORMULA:"):
-                resolved.append({
-                    "term": entry["term"],
-                    "predicate": f"/* {value} */",
-                    "table": table,
-                    "column": column,
-                    "value": value,
-                    "type": "formula",
-                })
-                continue
-
-            if table.lower() in retrieved_tables:
-                predicate = f"{table}.{column} = '{value}'"
-                resolved.append({
-                    "term": entry["term"],
-                    "predicate": predicate,
-                    "table": table,
-                    "column": column,
-                    "value": value,
-                    "type": "exact_match",
-                })
-            else:
-                resolved.append({
-                    "term": entry["term"],
-                    "predicate": f"{table}.{column} = '{value}'",
-                    "table": table,
-                    "column": column,
-                    "value": value,
-                    "type": "external_lookup",
-                })
+            
+            resolved.append({
+                "term": entry["term"],
+                "predicate": predicate,
+                "type": "exact_match",
+            })
         logger.info("domain_resolved", count=len(resolved),
                      terms=[r["term"] for r in resolved])
         return resolved

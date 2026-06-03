@@ -31,7 +31,7 @@ class LLMClient:
             logger.warning("llm_skipped", reason="No API key configured")
             return "SELECT 'No API key configured. Set GROQ_API_KEY in .env' AS error;"
 
-        logger.info("llm_request", model=self.model, prompt_length=len(user_prompt))
+        logger.info("llm_request", model=self.model, prompt=user_prompt)
 
         async with httpx.AsyncClient(timeout=30.0) as client:
             response = await client.post(
@@ -54,6 +54,6 @@ class LLMClient:
             response.raise_for_status()
         data = response.json()
         raw_output = data["choices"][0]["message"]["content"]
-        logger.info("llm_response", raw_length=len(raw_output))
+        logger.info("llm_response", response=raw_output)
         sql = clean_sql(raw_output)
         return sql

@@ -44,6 +44,9 @@ async def lifespan(app: FastAPI):
     logger.info("server_shutdown")
 
 
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+
 app = FastAPI(
     title="Enterprise Text-to-SQL API",
     description=(
@@ -56,6 +59,13 @@ app = FastAPI(
     redoc_url="/redoc",
     lifespan=lifespan,
 )
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request, exc):
+    return JSONResponse(
+        status_code=400,
+        content={"detail": str(exc)},
+    )
 
 # CORS middleware
 app.add_middleware(

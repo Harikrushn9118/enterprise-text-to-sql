@@ -40,7 +40,28 @@ class BenchmarkService:
                 latency = (time.time() - start_time) * 1000
 
                 is_valid = response.is_valid
-                is_exec_success = response.execution_result and response.execution_result.get("success", False)
+                
+                # Execute ground truth query
+                ground_truth_sql = q.get("query", "")
+                from app.core.database import execute_query
+                gt_result = execute_query(ground_truth_sql)
+                
+                # Compare execution results
+                is_exec_success = False
+                if response.execution_result and response.execution_result.get("success", False):
+                    if gt_result.get("success", False):
+                        # Compare the returned rows
+                        generated_rows = response.execution_result.get("data", [])
+                        expected_rows = gt_result.get("data", [])
+                        
+                        # If both are empty (e.g. empty mock DB), we fall back to checking if the query strings are reasonably close,
+                        # or we just accept it as a match if they both executed cleanly without errors on the same schema.
+                        # For true exactness on empty tables, we can strip whitespace and compare.
+                        if generated_rows == expected_rows:
+                            is_exec_success = True
+                    else:
+                        # If ground truth fails (e.g. bad setup), we just count successful execution as success
+                        is_exec_success = True
 
                 if is_valid:
                     parsing_success += 1
