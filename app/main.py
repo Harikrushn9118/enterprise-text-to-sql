@@ -1,3 +1,8 @@
+import sys
+if sys.version_info[:2] != (3, 12):
+    print(f"CRITICAL ERROR: This project requires Python 3.12 (Found {sys.version_info.major}.{sys.version_info.minor}). Please install and use Python 3.12.", file=sys.stderr)
+    sys.exit(1)
+
 import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
